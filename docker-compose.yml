@@ -2,12 +2,12 @@ version: '2'
 
 services:
 
-  phpzm-node:
+  fusca-meu.node:
     image: ambientum/node:7
-    container_name: phpzm-node
+    container_name: fusca-meu.node
     command: ./script.start.sh
     volumes:
       - .:/var/www/app
     ports:
-      - 5000:8080
+      - 6000:8080
 
