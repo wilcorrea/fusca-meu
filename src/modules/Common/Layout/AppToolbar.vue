@@ -1,7 +1,7 @@
 <template>
   <div class="app-toolbar">
     <div class="on-left">
-      <slot name="left">{{ title }}</slot>
+      <slot name="left">{{ getAppTitle }}</slot>
     </div>
     <div class="on-right">
       <slot name="right"></slot>
@@ -10,17 +10,15 @@
 </template>
 
 <script type="text/javascript">
+  import {mapGetters} from 'vuex'
   export default {
     name: 'app-toolbar',
     props: {},
     data: () => ({
       title: 'Title'
     }),
-    computed: {},
-    methods: {},
-    created () {
-    },
-    mounted () {
+    computed: {
+      ...mapGetters(['getAppTitle'])
     }
   }
 </script>

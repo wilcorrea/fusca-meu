@@ -3,26 +3,6 @@
     <app-layout :left="left" :right="right" :footer="footer" :swipe="swipe" :flat="flat">
       <app-toolbar slot="header">
         <div slot="right">
-          <label>
-            <q-checkbox v-model="left" class="red"></q-checkbox>
-            Left
-          </label>
-          <label>
-            <q-checkbox v-model="right" class="red"></q-checkbox>
-            Right
-          </label>
-          <label>
-            <q-checkbox v-model="footer" class="red"></q-checkbox>
-            Footer
-          </label>
-          <label>
-            <q-checkbox v-model="swipe" class="red"></q-checkbox>
-            Swipe
-          </label>
-          <label>
-            <q-checkbox v-model="flat" class="red"></q-checkbox>
-            Flat
-          </label>
         </div>
       </app-toolbar>
     </app-layout>
@@ -44,7 +24,7 @@
     },
     data: () => ({
       left: true,
-      right: true,
+      right: false,
       footer: false,
       swipe: false,
       flat: true
@@ -52,39 +32,25 @@
     created () {
       this.setAppMenuLeft([
         {
-          icon: 'home',
+          icon: 'store',
           to: {
-            path: '/dashboard', exact: true
+            path: '/', exact: true
           },
           label: 'Home'
         },
         {
-          icon: 'web',
+          icon: 'assessment',
           to: {
-            path: '/dashboard/forms', exact: true
+            path: '/rankings', exact: true
           },
-          label: 'Forms'
+          label: 'Rankings'
         },
         {
-          icon: 'pie_chart_outlined',
+          icon: 'grade',
           to: {
-            path: '/dashboard/charts', exact: true
+            path: '/custom', exact: true
           },
-          label: 'Charts'
-        },
-        {
-          icon: 'pets',
-          to: {
-            path: '/dashboard/crud', exact: true
-          },
-          label: 'CRUD'
-        },
-        {
-          icon: 'power_settings_new',
-          to: {
-            path: '/', exact: true
-          },
-          label: 'Logout'
+          label: 'Custom'
         }
       ])
     }

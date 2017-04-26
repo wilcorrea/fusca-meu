@@ -1,3 +1,3 @@
 export default [
-  { path: '/', component: 'Auth/Index' }
+  // { path: '/', component: 'Auth/Index' }
 ]

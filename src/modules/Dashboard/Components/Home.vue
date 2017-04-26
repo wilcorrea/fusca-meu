@@ -1,25 +1,49 @@
 <template>
-  <div class="app-content" style="position: relative">
-    <div class="toolbar sub-toolbar">
-      Header
+  <dashboard-content>
+    <div slot="header">
+      <ul class="breadcrumb" style="margin: 0">
+        <li><a><i>store</i></a></li>
+      </ul>
     </div>
-    <div class="app-container">
-      Index
+    <div slot="content">
+      <table :class="['q-table', 'bordered', 'horizontal-delimiter', 'loose', 'responsive']" style="width: 100%">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Data</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-th="Descrição">Viagem para Vitória</td>
+            <td data-th="Data">10/10/2010</td>
+          </tr>
+          <tr>
+            <td data-th="Descrição">Viagem para Paty</td>
+            <td data-th="Data">10/10/2010</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="primary raised circular fixed-bottom-right rotate" @click="$router.push('/hunting')">
+        <i>add</i>
+      </button>
     </div>
-  </div>
+  </dashboard-content>
 </template>
 
 <script type="text/javascript">
+  import DashBoardComponent from 'src/modules/Dashboard/Resources/Component'
+  import DashboardContent from 'src/modules/Dashboard/Resources/DashboardContent'
+
   export default {
+    extends: DashBoardComponent,
     name: 'dashboard-home',
-    props: {},
-    data: () => ({}),
-    computed: {},
-    methods: {},
-    created () {
+    components: {
+      DashboardContent
     },
-    mounted () {
-    }
+    data: () => ({
+      title: 'Home'
+    })
   }
 </script>
 

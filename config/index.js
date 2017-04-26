@@ -3,6 +3,7 @@ var path = require('path')
 module.exports = {
   // Webpack aliases
   aliases: {
+    vue: 'vue/dist/vue.js',
     quasar: path.resolve(__dirname, '../node_modules/quasar-framework/'),
     themes: path.resolve(__dirname, '../themes'),
     src: path.resolve(__dirname, '../src'),
@@ -35,7 +36,7 @@ module.exports = {
     // auto open browser or not
     openBrowser: false,
     publicPath: '/',
-    port: 8080,
+    port: 5000,
 
     // If for example you are using Quasar Play
     // to generate a QR code then on each dev (re)compilation

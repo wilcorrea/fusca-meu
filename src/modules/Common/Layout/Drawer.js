@@ -16,7 +16,7 @@ export default (side) => {
     },
     data: () => ({}),
     computed: {
-      ...mapGetters(['AppMenuLeft']),
+      ...mapGetters(['getAppMenuLeft']),
       classNames () {
         const classNames = []
         if (this.flat) {
@@ -29,10 +29,6 @@ export default (side) => {
       open () {
         this.$refs.drawer.open()
       }
-    },
-    created () {
-    },
-    mounted () {
     }
   }
 }

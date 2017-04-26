@@ -1,12 +1,12 @@
 export default [
   {
-    path: '/dashboard',
+    path: '/',
     component: 'Dashboard/Index',
     children: [
       { path: '', component: 'Dashboard/Components/Home' },
-      { path: 'forms', component: 'Dashboard/Components/Forms' },
-      { path: 'charts', component: 'Dashboard/Components/Charts' },
-      { path: 'crud', component: 'Dashboard/Components/Crud' }
+      { path: 'rankings', component: 'Dashboard/Components/Rankings' },
+      { path: 'custom', component: 'Dashboard/Components/Custom' },
+      { path: 'hunting', component: 'Dashboard/Components/Hunting' }
     ]
   }
 ]
